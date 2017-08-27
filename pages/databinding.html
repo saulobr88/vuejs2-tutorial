@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS 2 - Tutorial</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Keyboard events - Two way Data Binding</h1>
+      <label>Name:</label>
+      <input type="text" v-model="name" />
+      <label>Age:</label>
+      <input type="text" v-model="age" />
+      <p>
+        Name: {{ name }} <br />
+        Age: {{ age }}
+      </p>
+    </div>
+    <script src="databinding.js"></script>
+  </body>
+</html>

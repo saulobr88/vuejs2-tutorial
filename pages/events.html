@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS 2 - Events</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-events">
+      <h1>Events</h1>
+      <button @click="add(1)" >Add a year</button>
+      <button v-on:click="subtract(1)" >Subtract a year</button>
+      <button @dblclick="add(10)" >Add 10 year</button>
+      <button v-on:dblclick="subtract(10)" >Subtract 10 year</button>
+      <p>My age is {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+    </div>
+    <div id="vue-events-mod">
+      <h1>Events Modifiers</h1>
+      <button @click.once="number++" >Add +1 - once</button>
+      <p>Number: {{ number }}</p>
+      <a v-on:click.prevent="click" href="https://github.com/saulobr88">Saulo Githut</a>
+      <a href="https://vuejs.org/v2/guide/events.html" target="_blank">More events modifiers</a>
+    </div>
+    <div id="vue-events-key">
+      <h1>Keyboard events</h1>
+      <label>Name:</label>
+      <input type="text" v-on:keyup.enter="logName" />
+      <label>Age:</label>
+      <input type="text" v-on:keyup.alt.enter="logAge" />
+    </div>
+    <script src="events.js"></script>
+  </body>
+</html>

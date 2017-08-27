@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS 2 - Tutorial</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Looping through lists</h1>
+      <h2>using ul</h2>
+      <ul>
+        <li v-for="character in characters">{{ character }}</li>
+      </ul>
+      <ul>
+        <li v-for="(character, index) in characters">{{ index}} . {{ character }}</li>
+      </ul>
+      <ul>
+        <li v-for="(ninja, index) in ninjas">{{ index }} . {{ ninja.name }} - {{ ninja.age }}</li>
+      </ul>
+
+      <h2>using template</h2>
+      <template v-for="(ninja, index) in ninjas">
+        <h3>{{ index }} . {{ ninja.name }}</h3>
+        <p>{{ ninja.age }}</p>
+      </template>
+
+      <template v-for="ninja in ninjas">
+        <div v-for="(val, key) in ninja">
+          <p>{{ key }} - {{ val }}</p>
+        </div>
+      </template>
+
+    </div>
+    <script src="loop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS 2 - Tutorial</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+    <h1>Conditionais</h1>
+    <button v-on:click="error = !error">Toogle Error</button>
+    <button v-on:click="success = !success">Toogle Success</button>
+    <h2>Using if-else</h2>
+    <p v-if="error">Error is true</p>
+    <p v-else-if="success">Success is true</p>
+    <p v-else> Error & Success are false</p>
+    <h2>Using v-show</h2>
+    <p v-show="error">There has been an error</p>
+    <p v-show="success">Whooo, success :)</p>
+    </div>
+    <script src="conditionals.js"></script>
+  </body>
+</html>
