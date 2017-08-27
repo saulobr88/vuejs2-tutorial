@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <title>VueJS 2 - Tutorial</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
     <div id="vue-app">
-      <h1>{{ greet('night') }}</h1>
+      <h1>VueJS 2 Tutorial</h1>
+      <p>A group of examples of VueJS pages.</p>
+      <ol>
+        <li> <a href="pages/basic.html">Basic</a> - Introdution with Data Binding & Methods</li>
+        <li> <a href="pages/events.html">Events</a> - Event handling with Mouse, Keyboard</li>
+        <li> <a href="pages/databinding.html">Two Way Data Binding</a> - Data binding using V-model</li>
+        <li> <a href="pages/computedproperties.html">Computed Properties</a> - Using computed instead of methods</li>
+        <li> <a href="pages/dynamiccss.html">Dynamic CSS</a> - Using dynamic classes</li>
+        <li> <a href="pages/conditionals.html">Conditionals</a> - Using Vue if else </li>
+        <li> <a href="pages/loop.html">Loops</a> - Using v-for for iterate with lists</li>
+        <li> <a href="pages/punchbag.html">Punchbag Game</a> - Simple Game with v-on:click event</li>
+        <li> <a href="pages/multipleinstances.html">Multiple Instances</a> - Using two instances which</li>
+      </ol>
 
-      <p>Name: {{ name }}</p>
-      <p>Job: {{ job }}</p>
-      <p>
-        <a v-bind:href="website" target="_blank">Root Page</a> |
-        <input type="text" v-bind:value="name" />
-      </p>
-      <p v-html="websiteTag"></p>
     </div>
-    <script src="js/app.js"></script>
+
   </body>
 </html>
