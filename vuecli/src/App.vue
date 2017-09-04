@@ -1,17 +1,20 @@
 <template>
   <div>
+    <app-header></app-header>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import addPost from './components/addPost.vue';
+/* No more needed, since vue-router is mapping
 import showPosts from './components/showPosts.vue';
+import addPost from './components/addPost.vue';
+*/
+import header from './components/header.vue';
 
 export default {
   components: {
-    'add-post': addPost,
-    'show-posts': showPosts
+    'app-header': header
   },
   data () {
     return {
