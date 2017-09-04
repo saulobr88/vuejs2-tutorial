@@ -1,15 +1,17 @@
 <template>
   <div>
-    <add-post></add-post>
+    <show-posts></show-posts>
   </div>
 </template>
 
 <script>
 import addPost from './components/addPost.vue';
+import showPosts from './components/showPosts.vue';
 
 export default {
   components: {
-    'add-post': addPost
+    'add-post': addPost,
+    'show-posts': showPosts
   },
   data () {
     return {
