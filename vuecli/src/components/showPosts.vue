@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import searchMixin from '../mixins/searchMixin';
 
 export default {
   data () {
@@ -18,20 +19,10 @@ export default {
       search: ''
     }
   },
-  methods: {
-
-  },
   created() {
     this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
       this.posts = data.body.slice(0,10);
     });
-  },
-  computed: {
-    filteredPosts: function(){
-      return this.posts.filter((post) => {
-          return post.title.match(new RegExp(this.search, 'i'));
-      });
-    }
   },
   filters: {
     snippet(value){
@@ -44,7 +35,8 @@ export default {
           el.style.color = "#" + Math.random().toString(16).slice(2, 8);
       }
     }
-  }
+  },
+  mixins: [searchMixin]
 }
 </script>
 
