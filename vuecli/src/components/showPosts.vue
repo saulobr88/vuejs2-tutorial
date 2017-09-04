@@ -28,10 +28,22 @@ export default {
   },
   computed: {
     filteredPosts: function(){
-            return this.posts.filter((post) => {
-                return post.title.match(new RegExp(this.search, 'i'));
-            });
-        }
+      return this.posts.filter((post) => {
+          return post.title.match(new RegExp(this.search, 'i'));
+      });
+    }
+  },
+  filters: {
+    snippet(value){
+      return value.slice(0,100) + '...';
+    }
+  },
+  directives: {
+    'rainbow' :{
+      bind(el, binding, vnode){
+          el.style.color = "#" + Math.random().toString(16).slice(2, 8);
+      }
+    }
   }
 }
 </script>
